@@ -4,7 +4,7 @@ This is a [Tauri](https://v2.tauri.app/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development:
+First, run app:
 
 ```bash
 yarn tauri dev
