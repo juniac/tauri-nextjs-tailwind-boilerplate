@@ -1,0 +1,46 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "tauri-nextjs-boilerplate",
+  "version": "0.1.0",
+  "identifier": "io.oeoe.tauri-nextjs-boilerplate",
+  "build": {
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:3368",
+    "beforeDevCommand": "yarn dev",
+    "beforeBuildCommand": "yarn build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "tauri-nextjs-boilerplate-window-title",
+        "width": 1200,
+        "height": 1000,
+        "fullscreen": false,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32.png",
+      "icons/128.png",
+      "icons/128@2x.png",
+      "icons/icon.icns"
+    ]
+  },
+  "plugins": {
+    "deep-link": {
+      "desktop": {
+        "schemes": [
+          "tauri-nextjs-boilerplate-app-scheme",
+          "tauri-nextjs-boilerplate-app-scheme-second"
+        ]
+      }
+    }
+  }
+}
