@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button"
 export default function HomePage() {
   const [message, setMessage] = useState<string>("")
 
-  const onClickFirstButton = async () => {
+  const handleFirstButtonClick = async () => {
     console.log("first button clicked")
     const name = "jeong-un, kim"
     const result = await invoke("greet", { name })
     setMessage(result as string)
   }
-  const onClickSecondButton = async () => {
+  const handleSecondButtonClick = async () => {
     console.log("second button clicked")
     const result = await invoke("say_hello")
     setMessage(result as string)
@@ -33,12 +33,12 @@ export default function HomePage() {
         </div>
         <p className="text-center">{message}</p>
         <div className="relative z-20 flex items-center text-5xl font-extralight my-auto mx-auto space-x-5">
-          <Button type="button" onClick={onClickFirstButton}>
+          <Button type="button" onClick={handleFirstButtonClick}>
             Test Button 1
           </Button>
           <Button
             type="button"
-            onClick={onClickSecondButton}
+            onClick={handleSecondButtonClick}
             variant="secondary"
           >
             Test Button 2
